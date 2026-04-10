@@ -1,25 +1,25 @@
-# Sistema de Ventas en JavaScript
+# JavaScript Sales System
 
-Un sistema básico y estructurado desarrollado con Programación Orientada a Objetos (POO) en JavaScript puro. Este proyecto implementa la lógica de backend necesaria para gestionar inventarios de productos y procesar órdenes de compra de un comercio.
+A basic and structured system developed with Object-Oriented Programming (OOP) in pure JavaScript. This project implements the backend logic necessary to manage product inventories and process purchase orders for a business.
 
-## 🚀 Características
+## 🚀 Features
 
-- **Gestión de Productos (`Clase Producto`)**: Generación de artículos con identificadores únicos, nombres y precios, encapsulando sus atributos.
-- **Procesamiento de Órdenes (`Clase Orden`)**: Agrupación de productos en una factura y cálculo automático del total de ventas.
-- **Validaciones Integradas**: Control estricto de capacidad (máximo 5 productos por orden) para simular reglas de negocio reales.
-- **Identificadores Estáticos**: Uso de atributos `static` para mantener el conteo global de instancias creadas (IDs autoincrementables).
+- **Product Management (`Product Class`)**: Generation of items with unique identifiers, names, and prices, encapsulating their attributes.
+- **Order Processing (`Order Class`)**: Grouping products into an invoice and automatically calculating total sales.
+- **Integrated Validations**: Strict capacity control (maximum of 5 products per order) to simulate real business rules.
+- **Static Identifiers**: Use of `static` attributes to maintain the global count of created instances (auto-incrementing IDs).
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
 - JavaScript (ES6+)
-- Node.js (Para su ejecución en consola)
+- Node.js (For console execution)
 
-## 💻 Cómo Ejecutarlo
+## 💻 How to Run It
 
-1. Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu equipo.
-2. Descarga o clona este repositorio.
-3. Abre tu terminal y navega hasta la carpeta del proyecto.
-4. Ejecuta el archivo principal con el siguiente comando:
+1. Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
+2. Download or clone this repository.
+3. Open your terminal and navigate to the project folder.
+4. Run the main file using the following command:
 
 ```bash
 node sistemaDeVentas.js
