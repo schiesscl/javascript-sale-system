@@ -22,5 +22,5 @@ A basic and structured system developed with Object-Oriented Programming (OOP) i
 4. Run the main file using the following command:
 
 ```bash
-node sistemaDeVentas.js
+node saleSystem.js
 ```
