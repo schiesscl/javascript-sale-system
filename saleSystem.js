@@ -43,11 +43,12 @@ class Product {
     }
 
     /**
-     * Convert product details to a formatted string
+     * Convert product details to a formatted string.
+     * Uses .toFixed(2) to show two decimals natively.
      * @returns {string} String representation of the product
      */
     toString() {
-        return `idProduct: ${this._idProduct}, name: ${this._name}, price: $${this._price}`;
+        return `idProduct: ${this._idProduct}, name: ${this._name}, price: $${this._price.toFixed(2)}`;
     }
 }
 
@@ -105,7 +106,8 @@ class Order {
     }
 
     /**
-     * Output order summary and product list to the console
+     * Output order summary and product list to the console.
+     * Total is formatted using .toFixed(2) to show two decimals.
      */
     showOrder(){
         let productsOrder = "";
@@ -113,16 +115,16 @@ class Order {
         for(let product of this._products){
             productsOrder += `\n{${product.toString()}} `;
         }
-        // Print order ID, total calculation, and the product list
-        console.log(`\nOrder: ${this._idOrder}, Total: $${this.calculateTotal()}, Products: ${productsOrder}`);
+        // Print order ID, total calculation with 2 decimals, and the product list
+        console.log(`\nOrder: ${this._idOrder}, Total: $${this.calculateTotal().toFixed(2)}, Products: ${productsOrder}`);
     }
 }
 
 // --- Testing the Implementation ---
 
-// Create initial product instances
-let product1 = new Product("Pants", 20000);
-let product2 = new Product("Shirt", 30000);
+// Create initial product instances with simple integer values
+let product1 = new Product("Pants", 20);
+let product2 = new Product("Shirt", 30);
 
 // Create the first order and add products
 let order1 = new Order();
@@ -132,7 +134,7 @@ order1.showOrder(); // Display Order 1 summary
 
 // Create the second order and test the product limit
 let order2 = new Order();
-let product3 = new Product('Belt', 5000);
+let product3 = new Product('Belt', 5);
 
 // Adding multiple products to order 2
 order2.addProduct(product3);
@@ -140,7 +142,7 @@ order2.addProduct(product1);
 order2.addProduct(product2);
 order2.addProduct(product3);
 order2.addProduct(product1);
-// This 6th product should trigger the "Cannot add more products" message
+// This 6th product should trigger the warning
 order2.addProduct(product2); 
 
 order2.showOrder(); // Display Order 2 summary
